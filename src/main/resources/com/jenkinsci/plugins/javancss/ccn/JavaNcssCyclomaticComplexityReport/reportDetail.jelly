@@ -1,0 +1,21 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <table border="1px" class="pane sortable">
+        <thead>
+            <tr>
+                <th>${%ClassName}</th>
+                <th>${%MethodName}</th>
+                <th>${%Ccn}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <j:forEach var="r" items="${it.results}">
+                <tr>
+                    <td align="left">${r.fqcn}</td>
+                    <td align="left">${r.methodName}</td>
+                    <td align="right">${r.ccn}</td>
+                </tr>
+            </j:forEach>
+        </tbody>
+    </table>
+</j:jelly>
